@@ -13,7 +13,7 @@
 <meta property="og:description" content="问题引入开发过程中有时候会遇到需要调试弱网络异常的场景，比如超时重试、转菊花等。虽然可以通过修改代码逻辑来触发场景，但毕竟不是正式流程，而且每次都要重新编译不太方便。这时候就需要一些模拟弱网络环境的手段。">
 <meta property="og:image" content="https://cx3201.github.io/images/1.png">
 <meta property="og:image" content="https://cx3201.github.io/images/2.png">
-<meta property="og:updated_time" content="2015-08-31T12:31:25.000Z">
+<meta property="og:updated_time" content="2015-08-31T13:02:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="弱网络模拟">
 <meta name="twitter:description" content="问题引入开发过程中有时候会遇到需要调试弱网络异常的场景，比如超时重试、转菊花等。虽然可以通过修改代码逻辑来触发场景，但毕竟不是正式流程，而且每次都要重新编译不太方便。这时候就需要一些模拟弱网络环境的手段。">
@@ -225,7 +225,7 @@
         <h1 id="问题引入">问题引入</h1><p>开发过程中有时候会遇到需要调试弱网络异常的场景，比如超时重试、转菊花等。虽然可以通过修改代码逻辑来触发场景，但毕竟不是正式流程，而且每次都要重新编译不太方便。这时候就需要一些模拟弱网络环境的手段。</p>
 <a id="more"></a>
 <h1 id="解决方案">解决方案</h1><h2 id="真机">真机</h2><p>如果使用真机调试来得到弱网络环境，我们可以用2G、可以跑到信号差的地方、可以建一个无法连接Internet的WiFi，分分钟搞定，so easy。当然这些方法是没有什么问题，但真这么做就太naive了。除非是测试链路，否则这样调试非累死不可。</p>
-<p>正确的使用方式是：</p>
+<p>正确的使用方式是（设备需要启用开发者模式）：</p>
 <p><img src="/images/1.png" alt="iOS版"></p>
 <p>开发工具中的Network Link Conditioner可以模拟出不同的网络，还可以自定义网络环境，包括带宽、延时、丢包率、协议等等，十分强大。</p>
 <h2 id="模拟器">模拟器</h2><p>模拟器的系统设置中虽然也有开发者工具箱，但是却没有包含Network Link Conditioner，所以必须想其它的办法。由于模拟器与Mac共用网络，我们可以从Mac的网络着手。</p>
