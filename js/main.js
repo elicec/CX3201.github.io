@@ -103,7 +103,7 @@ require([], function (){
 	}
 
 	//文章收起侧边栏
-	if(yiliaConfig.isPost === true){
+	if(false){//yiliaConfig.isPost === true){
 		$(".left-col").addClass("left-col-hide");
 		$(".mid-col").addClass("mid-col-expand");
 		$(".expand-bar").removeClass("expand-bar-hide");

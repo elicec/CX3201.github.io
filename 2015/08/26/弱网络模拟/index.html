@@ -3,17 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>阿贝尔城</title>
+  <title>弱网络模拟 | 阿贝尔城</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="行到水穷处，坐看云起时">
-<meta property="og:type" content="website">
-<meta property="og:title" content="阿贝尔城">
-<meta property="og:url" content="https://cx3201.github.io/index.html">
+  <meta name="description" content="问题引入开发过程中有时候会遇到需要调试弱网络异常的场景，比如超时重试、转菊花等。虽然可以通过修改代码逻辑来触发场景，但毕竟不是正式流程，而且每次都要重新编译不太方便。这时候就需要一些模拟弱网络环境的手段。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="弱网络模拟">
+<meta property="og:url" content="https://cx3201.github.io/2015/08/26/弱网络模拟/index.html">
 <meta property="og:site_name" content="阿贝尔城">
-<meta property="og:description" content="行到水穷处，坐看云起时">
+<meta property="og:description" content="问题引入开发过程中有时候会遇到需要调试弱网络异常的场景，比如超时重试、转菊花等。虽然可以通过修改代码逻辑来触发场景，但毕竟不是正式流程，而且每次都要重新编译不太方便。这时候就需要一些模拟弱网络环境的手段。">
+<meta property="og:image" content="https://cx3201.github.io/images/1.png">
+<meta property="og:image" content="https://cx3201.github.io/images/2.png">
+<meta property="og:updated_time" content="2015-08-31T12:31:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="阿贝尔城">
-<meta name="twitter:description" content="行到水穷处，坐看云起时">
+<meta name="twitter:title" content="弱网络模拟">
+<meta name="twitter:description" content="问题引入开发过程中有时候会遇到需要调试弱网络异常的场景，比如超时重试、转菊花等。虽然可以通过修改代码逻辑来触发场景，但毕竟不是正式流程，而且每次都要重新编译不太方便。这时候就需要一些模拟弱网络环境的手段。">
   
   
     <link rel="icon" href="/img/head.png">
@@ -62,7 +65,7 @@
 				
 				
 				
-					<a class="current-item " href="/index.html">主页</a>
+					<a class="" href="/index.html">主页</a>
 				
 				
 	        
@@ -140,7 +143,7 @@
 					<li>
 					
 					
-						<a class="current-item " href="/index.html">主页</a>
+						<a class="" href="/index.html">主页</a>
 					
 					</li>
 		        
@@ -178,9 +181,7 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-弱网络模拟" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-弱网络模拟" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2015/08/26/弱网络模拟/" class="article-date">
@@ -194,43 +195,59 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title article-title-hover" href="/2015/08/26/弱网络模拟/">弱网络模拟</a>
+    <h1 class="article-title" itemprop="name">
+      弱网络模拟
     </h1>
   
 
       </header>
       
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="问题引入">问题引入</h1><p>开发过程中有时候会遇到需要调试弱网络异常的场景，比如超时重试、转菊花等。虽然可以通过修改代码逻辑来触发场景，但毕竟不是正式流程，而且每次都要重新编译不太方便。这时候就需要一些模拟弱网络环境的手段。</p>
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
 	</div>
 
-      
+        
 	<div class="article-category tagcloud">
 	<a class="article-category-link" href="/categories/iOS开发随笔/">iOS开发随笔</a>
 	</div>
 
 
+        <div class="clearfix"></div>
+      </div>
       
-        <p class="article-more-link">
-          <a  href="/2015/08/26/弱网络模拟/#more">More ></a>
-        </p>
+    
+    <div class="article-entry" itemprop="articleBody">
       
-      <div class="clearfix"></div>
+        <h1 id="问题引入">问题引入</h1><p>开发过程中有时候会遇到需要调试弱网络异常的场景，比如超时重试、转菊花等。虽然可以通过修改代码逻辑来触发场景，但毕竟不是正式流程，而且每次都要重新编译不太方便。这时候就需要一些模拟弱网络环境的手段。</p>
+<a id="more"></a>
+<h1 id="解决方案">解决方案</h1><h2 id="真机">真机</h2><p>如果使用真机调试来得到弱网络环境，我们可以用2G、可以跑到信号差的地方、可以建一个无法连接Internet的WiFi，分分钟搞定，so easy。当然这些方法是没有什么问题，但真这么做就太naive了。除非是测试链路，否则这样调试非累死不可。</p>
+<p>正确的使用方式是：</p>
+<p><img src="/images/1.png" alt="iOS版"></p>
+<p>开发工具中的Network Link Conditioner可以模拟出不同的网络，还可以自定义网络环境，包括带宽、延时、丢包率、协议等等，十分强大。</p>
+<h2 id="模拟器">模拟器</h2><p>模拟器的系统设置中虽然也有开发者工具箱，但是却没有包含Network Link Conditioner，所以必须想其它的办法。由于模拟器与Mac共用网络，我们可以从Mac的网络着手。</p>
+<p>以前我曾经采用过修改Mac系统防火墙的规则实现网络限速的方法：</p>
+<pre><code>sudo ipfw pipe <span class="number">1</span> config bw <span class="number">350</span>kbit/s plr <span class="number">0.05</span> delay <span class="number">10000</span>ms
+sudo ipfw add pipe <span class="number">1</span> dst-port http
+</code></pre><p>但这种方式用起来有些麻烦，而且ipfw命令在新的OS X上已经不再支持。</p>
+<p>经过搜索发现Mac系统也提供了Network Link Conditioner这个开发工具。从xcode的菜单进入开发工具中心，下载Hardware IO Tools for Xcode，运行其中的Network Link Conditioner就能在系统设置页面增加一个选项卡：</p>
+<p><img src="/images/2.png" alt="Mac版"></p>
+<p>功能和iOS的Network Link Conditioner类似，使用方法一目了然。</p>
+<p>本文只是给出了一些比较便捷的方案，还有一些其他的方法也能达到类似或者更强大的效果，比如利用Charles、Wireshark等工具，不再详细介绍。</p>
+
+      
+      
+      <div class="article-copy-right">
+        <h2></h2>
+        <a href="https://cx3201.github.io/2015/08/26/弱网络模拟/">本文链接：https://cx3201.github.io/2015/08/26/弱网络模拟/</a>
+      </div>
+      
     </div>
     
   </div>
+  
+    
   
 </article>
 
@@ -239,9 +256,6 @@
 
 
 
-
-  
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -263,8 +277,8 @@
 		fancybox: false,
 		mathjax: false,
 		animate: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
