@@ -103,18 +103,18 @@ require([], function (){
 	}
 
 	//文章收起侧边栏
-	if(false){//yiliaConfig.isPost === true){
-		$(".left-col").addClass("left-col-hide");
-		$(".mid-col").addClass("mid-col-expand");
-		$(".expand-bar").removeClass("expand-bar-hide");
-		var f = function(){
-			$(".left-col").removeClass("left-col-hide");
-			$(".mid-col").removeClass("mid-col-expand");
-			$(".expand-bar").addClass("expand-bar-hide");
-		}
-		$(".expand-button").bind("click", f);
-		$(".expand-button").bind("touchend", f);
-	}
+	// if(yiliaConfig.isPost === true){
+	// 	$(".left-col").addClass("left-col-hide");
+	// 	$(".mid-col").addClass("mid-col-expand");
+	// 	$(".expand-bar").removeClass("expand-bar-hide");
+	// 	var f = function(){
+	// 		$(".left-col").removeClass("left-col-hide");
+	// 		$(".mid-col").removeClass("mid-col-expand");
+	// 		$(".expand-bar").addClass("expand-bar-hide");
+	// 	}
+	// 	$(".expand-button").bind("click", f);
+	// 	$(".expand-button").bind("touchend", f);
+	// }
 	
 	//是否新窗口打开链接
 	if(yiliaConfig.open_in_new == true){

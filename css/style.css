@@ -197,6 +197,43 @@ a {
 #container {
   position: relative;
   min-height: 100%;
+/*.expand-bar {
+		display: table;
+		position: absolute;
+		min-height:100%;
+		background:#000;
+		opacity: 0.5;
+		width: 30px;
+		top: 0;
+		left: 270px;
+	}
+	.expand-button {
+		display: table-cell;
+		min-height:100%;
+		background:#000;
+		text-align: center;
+		color: white;
+		vertical-align: middle;
+		&:before{
+	      content: "\f054";
+	      font: 17px FontAwesome;
+	    }
+	    &:hover{
+	    	cursor: pointer;
+	    }
+	}
+
+	.left-col-hide {
+		transform: translate(-270px, 0 );
+	}
+
+	.mid-col-expand {
+		left: 30px;
+	}
+
+	.expand-bar-hide {
+		display: none;
+	}*/
 }
 #container #mobile-nav {
   display: none;
@@ -270,43 +307,6 @@ a {
   background: #eaeaea;
   left: 300px;
   width: auto;
-}
-#container .expand-bar {
-  display: table;
-  position: absolute;
-  min-height: 100%;
-  background: #000;
-  opacity: 0.5;
-  width: 30px;
-  top: 0;
-  left: 270px;
-}
-#container .expand-button {
-  display: table-cell;
-  min-height: 100%;
-  background: #000;
-  text-align: center;
-  color: #fff;
-  vertical-align: middle;
-}
-#container .expand-button:before {
-  content: "\f054";
-  font: 17px FontAwesome;
-}
-#container .expand-button:hover {
-  cursor: pointer;
-}
-#container .left-col-hide {
-  -webkit-transform: translate(-270px, 0);
-  -moz-transform: translate(-270px, 0);
-  -ms-transform: translate(-270px, 0);
-  transform: translate(-270px, 0);
-}
-#container .mid-col-expand {
-  left: 30px;
-}
-#container .expand-bar-hide {
-  display: none;
 }
 @media screen and (max-width: 800px) {
   #container .left-col {
