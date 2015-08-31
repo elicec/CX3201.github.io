@@ -740,12 +740,12 @@ a {
   position: absolute;
   padding-top: 15px;
   font-size: 1.8em;
+  z-index: 1000;
 }
 .archives-wrap .archive-year-wrap a {
   color: #666;
   font-weight: bold;
   padding-left: 48px;
-  z-index: 1000;
 }
 .archives {
   position: relative;
@@ -1353,12 +1353,12 @@ a {
   position: absolute;
   padding-top: 15px;
   font-size: 1.8em;
+  z-index: 1000;
 }
 .archives-wrap .archive-year-wrap a {
   color: #666;
   font-weight: bold;
   padding-left: 48px;
-  z-index: 1000;
 }
 .archives {
   position: relative;
