@@ -738,7 +738,6 @@ a {
   line-height: 35px;
   width: 200px;
   position: absolute;
-  z-index: 1000;
   padding-top: 15px;
   font-size: 1.8em;
 }
@@ -746,6 +745,7 @@ a {
   color: #666;
   font-weight: bold;
   padding-left: 48px;
+  z-index: 1000;
 }
 .archives {
   position: relative;
@@ -1351,7 +1351,6 @@ a {
   line-height: 35px;
   width: 200px;
   position: absolute;
-  z-index: 1000;
   padding-top: 15px;
   font-size: 1.8em;
 }
@@ -1359,6 +1358,7 @@ a {
   color: #666;
   font-weight: bold;
   padding-left: 48px;
+  z-index: 1000;
 }
 .archives {
   position: relative;
